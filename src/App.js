@@ -1,3 +1,6 @@
+import { Routes, Route } from 'react-router-dom';
+import ContactPage from './pages/ContactPage';
+import HomePage from './pages/HomePage';
 import React from 'react';
 import './App.css';
 import Header from './components/Header';
@@ -10,7 +13,11 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <CampsitesDirectoryPage />
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='contact' element={<ContactPage />} />
+        <Route path='directory' element={<CampsitesDirectoryPage />} />
+      </Routes>
       <Footer />
     </div>
   );
