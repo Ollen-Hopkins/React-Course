@@ -7,6 +7,7 @@ import Header from './components/Header';
 import CampsitesDirectoryPage from './pages/CampsitesDirectoryPage';
 import CampsiteDetailPage from './pages/CampsiteDetailPage';
 import Footer from './components/Footer';
+import AboutPage from './pages/AboutPage';
 
 
 
@@ -22,6 +23,7 @@ function App() {
             path='directory/:campsiteId'
             element={<CampsiteDetailPage />}
         />
+        <Route path='about' element={<AboutPage />} />
       </Routes>
       <Footer />
     </div>
