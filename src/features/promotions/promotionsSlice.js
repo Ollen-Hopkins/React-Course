@@ -46,6 +46,12 @@ export const promotionsReducer = promotionsSlice.reducer;
 
 
 export const SelectFeaturedPromotion = (state) => {
-    return state.promotions.promotionsArray.find((promotion) => promotion.featured);
+    return {
+        featuredItem: state.promotions.promotionsArray.find(
+            (promotion) => promotion.featured
+        ),
+        isLoading: state.promotions.isLoading,
+        errMsg: state.promotions.errMsg
+    };
 };
 
